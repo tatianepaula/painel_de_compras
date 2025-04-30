@@ -1,0 +1,369 @@
+
+/* Estilos personalizados para o Painel de Gestão de Compras */
+
+/* Estilos gerais */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .card {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-header {
+    border-radius: 0.5rem 0.5rem 0 0 !important;
+    font-weight: 600;
+  }
+  
+  /* Botões de ação na tabela */
+  .btn-visualizar, .btn-assumir {
+    margin-right: 0.25rem;
+  }
+  
+  /* Estilização do modal */
+  .modal-content {
+    border-radius: 0.5rem;
+  }
+  
+  .modal-header {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  
+.titulo-tabela {
+  padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+    margin-bottom: 0;
+    color: var(--bs-card-cap-color);
+    background-color: var(--bs-card-cap-bg);
+
+}
+
+  /* Estilização da tabela de solicitações */
+  .table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+  }
+  
+  /* Estilização dos cards de fornecedores */
+  .fornecedor-card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+  }
+  
+  .fornecedor-card .card-header {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem 0.5rem 0 0;
+    font-weight: 600;
+  }
+  
+  .fornecedor-vencedor .card-header {
+    background-color: rgba(25, 135, 84, 0.1);
+  }
+  
+  .fornecedor-selecionado {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+  }
+  
+  /* Estilização de campos obrigatórios */
+  .form-label.required::after {
+    content: "*";
+    color: red;
+    margin-left: 0.25rem;
+  }
+  
+  /* Estilização do badge de urgência */
+  .badge-urgencia-baixa {
+    background-color: #0dcaf0;
+  }
+  
+  .badge-urgencia-media {
+    background-color: #ffc107;
+  }
+  
+  .badge-urgencia-alta {
+    background-color: #dc3545;
+  }
+  
+  /* Estilização das tabs em modais */
+  .nav-tabs .nav-link {
+    color: #6c757d;
+    font-weight: 500;
+  }
+  
+  .nav-tabs .nav-link.active {
+    color: #0d6efd;
+    font-weight: 600;
+  }
+  
+  /* Estilização da timeline */
+  .timeline {
+    position: relative;
+    padding: 1rem 0;
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .timeline-item:before {
+    content: '';
+    position: absolute;
+    left: 0.75rem;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #e9ecef;
+  }
+  
+  .timeline-item:last-child:before {
+    height: 0.5rem;
+  }
+  
+  .timeline-item:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+  }
+  
+  .timeline-item-date {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+  }
+  
+  .timeline-item-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .timeline-item-body {
+    color: #495057;
+  }
+  
+  /* Animações de transição */
+  .modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+  }
+  
+  .modal.show .modal-dialog {
+    transform: none;
+  }
+  
+  /* Estilos responsivos para dispositivos móveis */
+  @media (max-width: 768px) {
+    .card-body {
+      padding: 1rem;
+    }
+    
+    .table-responsive {
+      font-size: 0.9rem;
+    }
+    
+    .modal-footer {
+      flex-direction: column;
+    }
+    
+    .modal-footer button {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+/* Estilos para os cards de resumo */
+.card-resumo {
+  border-left: 4px solid #0d6efd;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-resumo .card-body {
+  padding: 1rem;
+}
+
+.card-resumo .card-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.card-resumo .card-subtitle {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.card-resumo .card-text {
+  font-size: 0.75rem;
+  color: #28a745;
+}
+
+.card-resumo.pendentes {
+  border-left-color: #fd7e14;
+}
+
+.card-resumo.andamento {
+  border-left-color: #ffc107;
+}
+
+.card-resumo.concluidas {
+  border-left-color: #28a745;
+}
+
+/* Estilo para a barra de pesquisa */
+.search-container {
+  margin-bottom: 1rem;
+}
+
+.search-container .form-control {
+  max-width: 300px;
+}
+
+/* Adicione ao final do arquivo CSS */
+.form-label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.form-select, .form-control {
+  font-size: 0.875rem;
+}
+
+#btnBuscar {
+  height: calc(1.5em + 1rem + 2px);
+}
+
+@media (max-width: 992px) {
+  .col-md-2 {
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-2 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
+
+/* Adicione estas regras ao seu arquivo CSS */
+
+/* Estilos para os ícones dos cards */
+.icon-container {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.bg-orange {
+  background-color: #fd7e14;
+}
+
+.bg-yellow {
+  background-color: #ffc107;
+}
+
+.bg-green {
+  background-color: #28a745;
+}
+
+/* Ajustes de layout para os cards */
+.card-resumo .card-body {
+  padding: 1.25rem;
+}
+
+.card-resumo .d-flex {
+  min-height: 80px;
+}
+
+.card-resumo .card-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.card-resumo .card-subtitle {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.card-resumo .card-text {
+  font-size: 0.75rem;
+  color: #28a745;
+  margin-bottom: 0;
+}
+
+.card-resumo.pendentes .card-text {
+  color: #fd7e14;
+}
+
+.card-resumo.andamento .card-text {
+  color: #ffc107;
+}
+
+/* Ajuste para alinhar o ícone corretamente */
+.icon-container i {
+  line-height: 1;
+}
+
+/* Adicione ao final do arquivo CSS */
+.filtros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .filtros-grid {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .filtros-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Adicione estas regras */
+.card-resumo.atraso {
+  border-left-color: #dc3545;
+}
+
+.card-resumo.atraso .card-text {
+  color: #dc3545;
+}
+
+.bg-danger {
+  background-color: #dc3545;
+}
+/* Ajuste para o ícone de relógio */
+.bi-clock-fill {
+  font-size: 1.3rem;
+}
